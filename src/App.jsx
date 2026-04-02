@@ -1,8 +1,15 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import DashboardLayout from "./components/layout/DashboardLayout"
 
 function App() {
 
   return (
-<>Hello</>
+<BrowserRouter>
+<Routes>
+  <Route path="/" element={<DashboardLayout />}/>
+  <Route path="*" element={<div>Page Not Found</div>} />
+</Routes>
+</BrowserRouter>
   )
 }
 
